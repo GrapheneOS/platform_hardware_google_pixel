@@ -1,0 +1,3 @@
+<resources>
+    <string name="apn_source_service" translatable="false">app.grapheneos.carrierconfig2/.ApnServiceImpl</string>
+</resources>
