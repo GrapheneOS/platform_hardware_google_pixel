@@ -68,3 +68,10 @@ PRODUCT_PACKAGES += com.android.hardware.biometrics.face.virtual
 ifeq ($(RELEASE_INSTALL_AI_LABS_ARTIFACTS), true)
   include vendor/google/AILabs/ai_labs.mk
 endif
+
+DEVICE_PACKAGE_OVERLAYS += hardware/google/pixel/common/overlay
+
+ifneq ($(BOARD_WITHOUT_RADIO),true)
+    PRODUCT_PACKAGES += \
+        CarrierConfig2
+endif
