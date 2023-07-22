@@ -62,3 +62,10 @@ ifeq ($(RELEASE_AIDL_USE_UNFROZEN), true)
 PRODUCT_PACKAGES_DEBUG += com.android.hardware.biometrics.face.virtual
 endif
 
+
+DEVICE_PACKAGE_OVERLAYS += hardware/google/pixel/common/overlay
+
+ifneq ($(BOARD_WITHOUT_RADIO),true)
+    PRODUCT_PACKAGES += \
+        CarrierConfig2
+endif
