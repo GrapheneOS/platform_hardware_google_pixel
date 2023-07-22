@@ -39,3 +39,10 @@ BOARD_VENDOR_SEPOLICY_DIRS += hardware/google/pixel-sepolicy/wifi_perf_diag
 # but also allow explicit overriding for testing and development.
 SYSTEM_OPTIMIZE_JAVA ?= true
 SYSTEMUI_OPTIMIZE_JAVA ?= true
+
+DEVICE_PACKAGE_OVERLAYS += hardware/google/pixel/common/overlay
+
+ifneq ($(BOARD_WITHOUT_RADIO),true)
+    PRODUCT_PACKAGES += \
+        CarrierConfig2
+endif
