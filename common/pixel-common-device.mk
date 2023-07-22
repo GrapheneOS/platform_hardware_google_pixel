@@ -61,3 +61,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Virtual fingerprint HAL
 PRODUCT_PACKAGES_DEBUG += android.hardware.biometrics.fingerprint-service.example
 
+
+DEVICE_PACKAGE_OVERLAYS += hardware/google/pixel/common/overlay
+
+ifneq ($(BOARD_WITHOUT_RADIO),true)
+    PRODUCT_PACKAGES += \
+        CarrierConfig2
+endif

@@ -1,0 +1,3 @@
+<resources>
+    <string name="platform_carrier_config_package" translatable="false">app.grapheneos.carrierconfig2</string>
+</resources>
