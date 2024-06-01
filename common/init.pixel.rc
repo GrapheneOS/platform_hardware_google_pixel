@@ -26,3 +26,8 @@ on property:ota.warm_reset=1
 
 on property:ota.warm_reset=0
     write /sys/module/msm_poweroff/parameters/warm_reset 0
+
+on property:sys.erase_secure_element=start
+    # 3227512814 is ERASE_CONFIRMATION constant from nugget/include/app_nugget.h
+    exec -- /vendor/bin/hw/citadel_updater --erase=3227512814
+    setprop sys.erase_secure_element finished
