@@ -75,3 +75,5 @@ ifneq ($(BOARD_WITHOUT_RADIO),true)
     PRODUCT_PACKAGES += \
         CarrierConfig2
 endif
+
+PRODUCT_PACKAGES += SafetyRegulatoryInfo
