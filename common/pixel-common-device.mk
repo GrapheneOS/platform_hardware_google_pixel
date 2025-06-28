@@ -69,7 +69,7 @@ ifeq ($(RELEASE_INSTALL_AI_LABS_ARTIFACTS), true)
   include vendor/google/AILabs/ai_labs.mk
 endif
 
-DEVICE_PACKAGE_OVERLAYS += hardware/google/pixel/common/overlay
+PRODUCT_PACKAGES += GosTelephonyProviderOverlay GosTelephonyOverlay
 
 ifneq ($(BOARD_WITHOUT_RADIO),true)
     PRODUCT_PACKAGES += \
